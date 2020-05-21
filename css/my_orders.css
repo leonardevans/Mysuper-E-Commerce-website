@@ -1,0 +1,118 @@
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+.orders-overlay {
+  display: none;
+  background-color: rgb(37, 30, 56, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+  animation-name: ordersOpen;
+  animation-duration: 1s;
+}
+
+@keyframes ordersOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.orders {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--whiteBg);
+  /* min-width: 900px; */
+  border-radius: 5px;
+  overflow: scroll;
+
+  z-index: 3;
+}
+
+@media screen and (min-width: 768px) {
+  .orders {
+    /* margin: 20px auto; */
+    top: 20px;
+    left: 10%;
+    width: 80%;
+    /* min-width: 450px; */
+  }
+}
+
+.close-orders {
+  color: var(--primeBgColor);
+  float: right;
+  font-size: 30px;
+}
+
+.close-orders:hover,
+.close-orders:focus {
+  color: var(--whiteBg);
+  cursor: pointer;
+}
+
+.orders-header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background: var(--primeCoral);
+  color: var(--primeWhite);
+  padding: 15px;
+  border-radius: 5px 5px 0 0;
+}
+
+.orders-body {
+  padding: 10px;
+  margin: 10px;
+}
+
+.order {
+  background: #c2bcbc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.order table,
+.order-address {
+  border: 1px solid var(--primeBgColor);
+  margin: 10px;
+}
+.order table td,
+.order table th,
+.order-address {
+  padding: 10px;
+}
+
+.more-details {
+  display: none;
+}
+
+.view-more {
+  color: #c2bcbc;
+  background: var(--primeBgColor);
+  transition: var(--mainTransition);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.view-more:hover {
+  color: var(--primeBgColor);
+  background: var(--primeCoral);
+  cursor: pointer;
+}

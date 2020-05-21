@@ -1,0 +1,26 @@
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+#scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primeCoral);
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid var(--primeBgColor);
+  color: var(--primeWhite);
+  transition: var(--mainTransition);
+}
+
+#scrollTop:hover {
+  background: var(--primeBgColor);
+  border: 1px solid var(--primeCoral);
+}

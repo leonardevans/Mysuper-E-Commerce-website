@@ -1,0 +1,10 @@
+#addForm,
+#editForm {
+  padding: 10px;
+  width: 50%;
+}
+
+.add-category,
+.edit-category {
+  display: none;
+}

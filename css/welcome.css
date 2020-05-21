@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700"); 
+
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primeBgColor);
+ font-family: 'Oswald','Indie Flower' ;
+}
+
+#nav-bar {
+  margin-top: 5px;
+  background-color: var(--primeCoral);
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  position: sticky;
+}
+
+.logo {
+  letter-spacing: var(--mainSpacing);
+  cursor: pointer;
+  color: #000;
+}
+
+.account {
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: var(--primeBgColor);
+  color: var(--primeWhite);
+  cursor: pointer;
+  border: none;
+}
+
+.login-btn,
+.sign-up-btn {
+  color: var(--primeCoral);
+  padding: 0px 5px;
+}
+
+.account:hover {
+  background-color: rgb(37, 30, 56, 0.8);
+  color: var(--primeWhite);
+  transition: var(--mainTransition);
+}
+
+#welcome {
+  min-height: calc(100vh - 60px);
+  background: url("../images/blur-cart-chrome.jpg") center/cover no-repeat;
+  color: var(--primeWhite);
+  color: var(--primeWhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ban {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: 2rem;
+}
+
+.ban-title {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+  color: #000;
+}
+.ban-btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primeCoral);
+  color: black;
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ban-btn:hover {
+  background: transparent;
+  color: var(--primeCoral);
+  background-color: var(--primeBgColor);
+}
+
+.supermarkets {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0px;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.supermarkets > div {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.list-supermarkets tr:hover {
+  background: rgb(151, 127, 127);
+  cursor: pointer;
+}
+
+#footer {
+  background-color: var(--primeCoral);
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 10px 15px 10px 15px;
+}
+
+.modal {
+  display: none;
+  /* background: rgb(252, 121, 74, 0.5); */
+  background-color: rgb(37, 30, 56, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+  animation-name: modalOpen;
+  animation-duration: 1s;
+}
+
+.modal-content {
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  margin: 10% auto;
+  max-width: 400px;
+  min-width: 320px;
+  border-radius: 5px;
+}
+
+.modal-header {
+  background: var(--primeCoral);
+  color: var(--primeWhite);
+  padding: 15px;
+  border-radius: 5px 5px 0 0;
+}
+
+.close-btn {
+  color: white;
+  float: right;
+  font-size: 30px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+
+  cursor: pointer;
+}
+
+.modal-body {
+  background: var(--whiteBg);
+  color: var(--primeWhite);
+  padding: 15px;
+}
+
+.modal-body select {
+  color: #000;
+}
+
+.modal-body table th {
+  background: var(--primeBgColor);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.modal-body > div > table select {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background: var(--whiteBg);
+  cursor: pointer;
+  border: 1px solid var(--primeBgColor);
+}
+
+.modal-footer {
+  background: var(--primeCoral);
+  color: var(--primeWhite);
+  padding: 15px;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-footer > .btn {
+  border-radius: 5px;
+  border: none;
+  padding: 1em 1.5em;
+  background-color: var(--primeBgColor);
+  color: var(--primeWhite);
+  cursor: pointer;
+}
+
+.modal-footer > .btn:hover {
+  background-color: rgb(37, 30, 56, 0.8);
+  color: var(--primeWhite);
+  transition: var(--mainTransition);
+}
+
+.skip {
+  text-decoration: none;
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.middle-bar a {
+  margin: 10px;
+  font-size: 2em;
+  color: #b2b2b2;
+  transition: all 0.35s;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+}
+
+.middle-bar a:hover {
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+.fa-facebook:hover {
+  color: rgb(22, 25, 206);
+}
+
+.fa-twitter:hover {
+  color: rgb(22, 117, 206);
+}
+
+.fa-github:hover {
+  color: rgb(18, 18, 19);
+}
+
+.top-bar {
+  padding: 5px;
+  letter-spacing: var(--mainSpacing);
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: var(--primeWhite);
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.top-bar a:hover {
+  background: var(--primeBgColor);
+  text-transform: uppercase;
+}
+
+.supermarkets h4 {
+  background: var(--primeCoral);
+  padding: 10px;
+  width: 100%;
+}

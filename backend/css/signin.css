@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700"); 
+
+.nav-bottom h4 {
+  text-align: center;
+}
+
+.signin-contents {
+  position: fixed;
+  top: 13%;
+
+  padding-bottom: 500px;
+  height: 100%;
+  width: 100%;
+
+  margin-top: 5px;
+
+  background: var(--whiteBg);
+}
+
+#sign-up-form,
+#recover-form,
+#sign-in-form {
+  margin-top: 30px;
+}
+
+.submit-errors {
+  padding: 10px;
+}

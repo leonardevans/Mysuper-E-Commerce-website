@@ -1,0 +1,126 @@
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.category-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  display: block;
+  color: var(--primeWhite);
+  background: var(--primeBgColor);
+  padding: 13px;
+  border-radius: 3px;
+  border: 1px solid var(--primeBgColor);
+}
+
+.category-dropbtn {
+  display: block;
+  color: var(--primeWhite);
+  padding: 13px;
+  border-radius: 3px;
+  border: 1px solid var(--primeBgColor);
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background: rgb(207, 106, 69);
+  cursor: pointer;
+  color: var(--primeBgColor);
+  border: 1px solid var(--primeBgColor);
+}
+
+.category-dropbtn:hover,
+.category-dropbtn:focus {
+  background: rgb(207, 106, 69);
+  cursor: pointer;
+  border: 1px solid var(--primeBgColor);
+}
+
+.dropdown-content {
+  display: none;
+  color: var(--primeWhite);
+  background: var(--primeBgColor);
+  right: -5%;
+  position: absolute;
+  padding: 10px 10px;
+  margin: 0px 2px;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.cat-dropdown-content {
+  display: none;
+  color: var(--primeWhite);
+  background: var(--primeBgColor);
+  left: -5%;
+  position: absolute;
+  padding: 10px 10px;
+  margin: 0px 2px;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a,
+.cat-dropdown-content a {
+  text-decoration: none;
+  color: var(--primeWhite);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+}
+
+#show_username:hover {
+  background: var(--primeBgColor);
+  cursor: default;
+}
+
+.dropdown-content a:hover,
+.cat-dropdown-content a:hover {
+  background: var(--primeCoral);
+  cursor: pointer;
+}
+
+.dropbtn:hover .dropdown-content,
+.category-dropbtn:hover .cat-dropdown-content {
+  display: block;
+}
+
+.show-content {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .dropbtn,
+  .category-dropbtn {
+    display: none;
+  }
+
+  .cat-dropdown-content {
+    position: absolute;
+  }
+
+  .dropdown-content {
+    display: block;
+    position: relative;
+  }
+  .dropdown-content a {
+    display: inline;
+  }
+}

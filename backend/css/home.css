@@ -1,0 +1,33 @@
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+.dashboard-overview {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.overview {
+  background: var(--primeWhite);
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.l-orders-header {
+  background: var(--primeCoral);
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.latest-orders-tbody tr:hover {
+  cursor: pointer;
+}

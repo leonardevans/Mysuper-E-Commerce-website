@@ -1,0 +1,58 @@
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+.edit-product-btn {
+  margin: 10px;
+}
+
+.edit-product-images,
+.add-product-images,
+.show-product-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  max-height: 380px;
+}
+
+.add-product-images img,
+.show-product-images img,
+.edit-product-images img {
+  width: 100%;
+  max-height: 200px;
+}
+
+.product-reviews h4 {
+  padding: 10px;
+}
+
+.product-description,
+.show-product-images,
+.product-rating,
+.product-reviews {
+  padding: 15px;
+  background: var(--primeWhite);
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.product-review {
+  border-radius: 5px;
+}
+
+.view-product,
+.edit-product,
+.add-product {
+  display: none;
+}
+
+.products-table img {
+  width: 30px;
+  height: 30px;
+}

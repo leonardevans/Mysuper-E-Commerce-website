@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700"); 
+
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primeBgColor);
+ font-family: 'Oswald','Indie Flower' ;
+
+}
+
+#nav-bar {
+  margin-top: 5px;
+  background-color: var(--primeCoral);
+  padding: 10px 15px 10px 15px;
+  top: 0;
+  position: sticky;
+}
+
+#page-in {
+  background: rgb(207, 106, 69);
+  color: var(--primeWhite);
+  padding: 10px 15px 10px 15px;
+  text-align: center;
+  color: black;
+}
+
+.logo {
+  letter-spacing: var(--mainSpacing);
+  cursor: pointer;
+  color: black;
+}
+
+#container {
+  background: var(--whiteBg);
+
+  padding: 5px;
+}
+
+.login-container {
+  width: 70%;
+  margin: auto;
+}
+
+input[type="text"],
+input[type="password"] {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 10px;
+  width: 100%;
+  max-width: 300px;
+  min-width: 100px;
+  margin: 3px 0px;
+}
+
+.login-table {
+  width: 100%;
+  text-align: left;
+}
+
+.login-btn {
+  margin: 3px 0px;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primeCoral);
+  color: black;
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  min-width: 100px;
+}
+
+.login-btn:hover {
+  background-color: var(--primeBgColor);
+  color: var(--primeCoral);
+}
+
+#footer {
+  background-color: var(--primeCoral);
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 10px 15px 10px 15px;
+}
+
+.middle-bar a {
+  margin: 10px;
+  font-size: 2em;
+  color: #b2b2b2;
+  transition: all 0.35s;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+}
+
+.middle-bar a:hover {
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+.fa-facebook:hover {
+  color: rgb(22, 25, 206);
+}
+
+.fa-twitter:hover {
+  color: rgb(22, 117, 206);
+}
+
+.fa-github:hover {
+  color: rgb(18, 18, 19);
+}
+
+.top-bar {
+  padding: 5px;
+  letter-spacing: var(--mainSpacing);
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: var(--primeWhite);
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.top-bar a:hover {
+  background: var(--primeBgColor);
+  text-transform: uppercase;
+}
+
+.form-error {
+  text-align: center;
+  background: rgb(206, 40, 40);
+  color: var(--primeWhite);
+  padding: 10px;
+  max-width: 300px;
+  border-radius: 5px;
+  display: none;
+}

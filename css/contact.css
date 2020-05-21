@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700"); 
+
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+body{
+    font-family: 'Oswald','Indie Flower' ;
+}
+
+.contact {
+  margin: 5px;
+  background: var(--primeBgColor);
+}
+
+.contact p {
+  color: var(--primeWhite);
+}
+
+.contact h2 {
+  color: var(--primeWhite);
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+.contact .container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: transparent;
+  padding: 20px 0;
+}
+
+#contact-form {
+  border: 1px solid var(--whiteBg);
+  border-radius: 5px;
+  margin: 10px 5px;
+  padding: 10px;
+}
+
+#contact-form input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border: 1px solid #000;
+  background: transparent;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: #b2b2b2;
+  border-radius: 5px;
+}
+
+#contact-form input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #96007d;
+}
+
+#contact-form input[type="submit"] {
+  background-color: var(--primeCoral);
+  color: var(--primeWhite);
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: var(--mainTransition);
+  border-radius: 5px;
+}
+
+#contact-form input[type="submit"]:hover {
+  background: var(--primeBgColor);
+  border: 1px solid var(--primeCoral);
+}
+
+.contact .fa-phone,
+.fa-whatsapp {
+  color: white;
+  display: inline-block;
+  font-size: 2em;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.fa-whatsapp {
+  background: rgb(11, 185, 78);
+}
+
+.fa-phone {
+  background: rgb(11, 185, 156);
+}

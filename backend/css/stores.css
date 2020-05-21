@@ -1,0 +1,10 @@
+#addForm,
+#editForm {
+  padding: 10px;
+  width: 50%;
+}
+
+.add-store,
+.edit-store {
+  display: none;
+}

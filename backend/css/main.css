@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700"); 
+
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primeBgColor);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 13%;
+  /* margin: 0px 20px; */
+  color: white;
+  background: var(--primeCoral);
+}
+
+.logo {
+  letter-spacing: var(--mainSpacing);
+
+  color: #000;
+}
+
+aside {
+  position: fixed;
+  top: 13%;
+  left: 0;
+  width: 11%;
+  height: 100%;
+  margin: 5px 20px 0px 20px;
+  padding: 10px;
+  background: var(--whiteBg);
+  margin-bottom: 50px;
+}
+
+footer {
+  /* position: fixed; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background: var(--primeCoral);
+  align-items: center;
+  text-align: center;
+}
+
+.contents {
+  position: fixed;
+  top: 13%;
+  left: 12%;
+  padding-bottom: 500px;
+  height: 100%;
+  width: 86.6%;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 5px;
+  overflow: scroll;
+
+  background: var(--whiteBg);
+}
+
+.nav-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: space-between;
+  padding: 10px;
+}
+
+.nav-bottom {
+  padding: 10px 20px 15px 20px;
+  background: var(--primeBgColor);
+}
+
+.fa-cog {
+  font-size: 20px;
+}
+
+.page-links {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  transition: var(--mainTransition);
+}
+
+.page-links:hover {
+  background: var(--primeCoral);
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  background: var(--primeCoral);
+  text-decoration: none;
+}
+
+.active:hover {
+  cursor: default;
+}
+
+.admin-logged {
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  background: var(--primeBgColor);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.username {
+  text-decoration: underline;
+}
+
+.logout-btn {
+  margin: 0px 10px;
+  padding: 5px;
+}
+
+.logout-btn:hover {
+  cursor: pointer;
+  color: var(--primeCoral);
+}
+
+aside h5,
+.dashboard-page-link {
+  background: var(--primeWhite);
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.dashboard-page-link {
+  margin: 5px 0px;
+}
+.dashboard-page-link a {
+  text-decoration: none;
+  color: #000;
+}
+
+.dpl-active a {
+  color: var(--primeCoral);
+  cursor: default;
+}
+.dashboard-page-link a:hover {
+  text-decoration: none;
+  color: var(--primeCoral);
+}
+.dashboard-page-link span {
+  float: right;
+  background: var(--whiteBg);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.contents-header {
+  background: var(--primeCoral);
+  position: fixed;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.demo-div {
+  height: 150px;
+}
+
+.contents-holder {
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.cancel-btn,
+.add-btn {
+  margin: 10px;
+}

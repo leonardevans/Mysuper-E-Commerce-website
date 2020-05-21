@@ -1,0 +1,287 @@
+:root {
+  --primeBgColor: rgb(37, 30, 56);
+  --primeWhite: #ffffff;
+  --whiteBg: #e6dddd;
+  --primeCoral: coral;
+  --mainSpacing: 0.1em;
+  --mainTransition: all 0.3s linear;
+}
+
+.checkout-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--mainTransition);
+  background-color: rgb(37, 30, 56, 0.7);
+  /* background: rgb(252, 121, 74, 0.5); */
+  z-index: 2;
+  visibility: hidden;
+}
+
+.checkout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: var(--whiteBg);
+  z-index: 3;
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(-100%);
+}
+
+.show-checkout {
+  transform: translateX(0);
+}
+
+.visible-bg {
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  .checkout {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+.close-checkout {
+  font-size: 1.7rem;
+  cursor: pointer;
+  float: right;
+  clear: both;
+}
+
+.close-checkout:hover {
+  color: var(--primeCoral);
+}
+
+.checkout-header {
+  clear: both;
+}
+
+.checkout .headers {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+}
+
+.checkout-header ul {
+  list-style-type: none;
+  padding: 10px 10px;
+  margin: 5px;
+  overflow: hidden;
+  background: var(--primeBgColor);
+}
+
+.checkout-header li {
+  padding: 10px;
+  margin: 0px 3px;
+  float: left;
+}
+
+.disabled {
+  color: #e6dddd;
+  /* background: rgba(209, 200, 200, 0.6); */
+}
+
+.active {
+  color: var(--primeCoral);
+}
+
+.active:hover {
+  background: var(--primeCoral);
+  color: var(--primeWhite);
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+
+.checkout-content table {
+  padding: 10px;
+  width: 80%;
+}
+
+.checkout-content table tr {
+  padding: 10px;
+}
+
+.checkout-content table tr input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+.checkout-content table tr input[type="text"]:focus {
+  border: 1.2px solid #3d576d;
+}
+
+.checkout-content input[type="radio"] {
+  padding: 5px;
+}
+
+.checkout-content input[type="radio"]:focus {
+  color: var(--primeCoral);
+}
+
+.checkout-totals table td {
+  padding: 10px;
+  text-align: right;
+}
+
+.checkout-content table caption,
+.payment h4 {
+  padding: 10px;
+  background: rgb(209, 200, 200);
+}
+
+.grand-total-td {
+  border-top: 1px solid black;
+}
+
+.deliver-home,
+.pick-from-store,
+.checkout-totals {
+  margin: 10px 0px;
+}
+
+.proceed-btn {
+  padding: 7px;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  width: 100%;
+  color: black;
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgb(12, 168, 90);
+}
+
+.proceed-btn:hover {
+  background: transparent;
+  color: var(--primeCoral);
+  background-color: var(--primeBgColor);
+}
+
+.payment-method-div {
+  margin: 10px 0px;
+}
+
+.payment {
+  display: none;
+}
+
+.statement {
+  display: none;
+}
+
+.deliver-home {
+  display: none;
+}
+.pick-from-store {
+  display: none;
+}
+
+::-ms-check {
+  color: var(--primeBgColor);
+  background: var(--primeCoral);
+  padding: 2px;
+}
+
+.home-address-table {
+  display: none;
+  width: 100%;
+}
+
+.customer-addresses,
+.statement-details {
+  margin: 10px 0px;
+  padding: 10px;
+  background: rgb(209, 200, 200);
+}
+
+.customer-addresses::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.address-p {
+  background: #93979b;
+  padding: 5px;
+  margin: 5px;
+}
+
+.address-p::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.fa-plus,
+.fa-minus {
+  padding: 5px;
+  font-size: 1.5rem;
+  float: right;
+  transition: var(--mainTransition);
+}
+
+.fa-plus:hover,
+.fa-minus:hover {
+  color: var(--primeCoral);
+  cursor: pointer;
+}
+
+.submit-address {
+  padding: 7px;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  color: black;
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgb(12, 168, 90);
+}
+
+.submit-address:hover {
+  background: transparent;
+  color: var(--primeCoral);
+  background-color: var(--primeBgColor);
+}
+
+.checkout-error {
+  padding: 5px;
+  color: rgb(226, 33, 33);
+}
+
+#delete-address {
+  background: rgb(196, 58, 58);
+  color: white;
+  cursor: pointer;
+  float: right;
+  padding: 5px;
+  transition: var(--mainTransition);
+
+  border-radius: 5px;
+}
+
+#delete-address:hover {
+  background: var(--primeBgColor);
+}
+
+input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+.active-now {
+  background: var(--primeCoral);
+  color: var(--primeWhite);
+}

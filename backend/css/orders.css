@@ -1,0 +1,20 @@
+.address h4 {
+  padding: 10px;
+}
+
+#update-order-form {
+  padding: 10px;
+  max-width: 400px;
+}
+
+.view-order {
+  display: none;
+}
+
+.order-items tr:hover {
+  cursor: pointer;
+}
+.order-items img {
+  width: 40px;
+  height: 40px;
+}
